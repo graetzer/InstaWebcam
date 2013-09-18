@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class GCDWebServer, SGVideoViewController;
+
 @interface SGAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) GCDWebServer *webserver;
+@property (strong, nonatomic) SGVideoViewController *videoController;
 
 @end

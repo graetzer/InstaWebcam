@@ -7,43 +7,76 @@
 //
 
 #import "SGAppDelegate.h"
+#import "BLWebSocketsServer.h"
+#import "GCDWebServer.h"
+#import "SGVideoDriver.h"
+#import "SGVideoViewController.h"
 
 @implementation SGAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.webserver = [[GCDWebServer alloc] init];
+    [self _setupWebServer];
+    [self.webserver startWithPort:80 bonjourName:nil];
+    [[SGVideoDriver shared] start];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.videoController = [SGVideoViewController new];
+    self.window.rootViewController = self.videoController;
     [self.window makeKeyAndVisible];
+    
+
+    
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+- (void)_setupWebServer {
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Web" ofType:@"bundle"];
+    [self.webserver addHandlerForBasePath:@"/"
+                                localPath:path
+                            indexFilename:@"index.html"
+                                 cacheAge:3600];
+    
+    [self.webserver addHandlerForMethod:@"GET"
+                                   path:@"/livefeed.jpeg"
+                           requestClass:[GCDWebServerRequest class]
+                           processBlock:^GCDWebServerResponse *(GCDWebServerRequest* request) {
+                               return [GCDWebServerDataResponse responseWithData:[[SGVideoDriver shared] jpegImage]
+                                                                     contentType:@"image/jpeg"];
+                           }];
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+- (void)_setupWebSocket {
+    //every request made by a client will trigger the execution of this block.
+//    [[BLWebSocketsServer sharedInstance] setHandleRequestBlock:^NSData *(NSData *data) {
+//        //simply echo what has been received
+//        return data;
+//    }];
+//    //Start the server
+//    [[BLWebSocketsServer sharedInstance] startListeningOnPort:9000 withProtocolName:@"my-protocol-name" andCompletionBlock:^(NSError *error) {
+//        if (!error) {
+//            NSLog(@"Server started");
+//        } else {
+//            NSLog(@"%@", error);
+//        }
+//    }];
+//    //Push a message to every connected clients
+//    [[BLWebSocketsServer sharedInstance] pushToAll:[@"pushed message" dataUsingEncoding:NSUTF8StringEncoding]];
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    [[SGVideoDriver shared] stop];
+    [self.webserver stop];
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    [self.webserver startWithPort:80 bonjourName:nil];
+    [[SGVideoDriver shared] start];
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
 
 @end

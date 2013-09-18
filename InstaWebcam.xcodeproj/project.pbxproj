@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F45E1FE317E8EE8C00821D8E /* SGVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45E1FE217E8EE8C00821D8E /* SGVideoViewController.m */; };
+		F45E1FE517E8FBCB00821D8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45E1FE417E8FBCB00821D8E /* QuartzCore.framework */; };
+		F45E1FE717E905BB00821D8E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F45E1FE617E905BB00821D8E /* libz.dylib */; };
+		F4CC3B6517E72FBA0053D812 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CC3B6417E72FBA0053D812 /* Foundation.framework */; };
+		F4CC3B6717E72FBA0053D812 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CC3B6617E72FBA0053D812 /* CoreGraphics.framework */; };
+		F4CC3B6917E72FBA0053D812 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CC3B6817E72FBA0053D812 /* UIKit.framework */; };
+		F4CC3B6F17E72FBA0053D812 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4CC3B6D17E72FBA0053D812 /* InfoPlist.strings */; };
+		F4CC3B7117E72FBA0053D812 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3B7017E72FBA0053D812 /* main.m */; };
+		F4CC3B7517E72FBA0053D812 /* SGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3B7417E72FBA0053D812 /* SGAppDelegate.m */; };
+		F4CC3B7717E72FBA0053D812 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4CC3B7617E72FBA0053D812 /* Images.xcassets */; };
+		F4CC3BAE17E743DD0053D812 /* Web.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F4CC3BAD17E743DD0053D812 /* Web.bundle */; };
+		F4CC3BC817E751960053D812 /* GCDWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BC017E751960053D812 /* GCDWebServer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F4CC3BC917E751960053D812 /* GCDWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BC217E751960053D812 /* GCDWebServerConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F4CC3BCA17E751960053D812 /* GCDWebServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BC517E751960053D812 /* GCDWebServerRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F4CC3BCB17E751960053D812 /* GCDWebServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BC717E751960053D812 /* GCDWebServerResponse.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F4CC3BE717E7519F0053D812 /* BLWebSocketsServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BCE17E7519F0053D812 /* BLWebSocketsServer.m */; };
+		F4CC3BE817E7519F0053D812 /* base64-decode.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BD017E7519F0053D812 /* base64-decode.c */; };
+		F4CC3BE917E7519F0053D812 /* BLAsyncMessageQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BD217E7519F0053D812 /* BLAsyncMessageQueue.m */; };
+		F4CC3BEA17E7519F0053D812 /* client-handshake.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BD317E7519F0053D812 /* client-handshake.c */; };
+		F4CC3BEB17E7519F0053D812 /* client-parser.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BD417E7519F0053D812 /* client-parser.c */; };
+		F4CC3BEC17E7519F0053D812 /* client.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BD517E7519F0053D812 /* client.c */; };
+		F4CC3BED17E7519F0053D812 /* daemonize.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BD617E7519F0053D812 /* daemonize.c */; };
+		F4CC3BEE17E7519F0053D812 /* extension-deflate-frame.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BD717E7519F0053D812 /* extension-deflate-frame.c */; };
+		F4CC3BEF17E7519F0053D812 /* extension-deflate-stream.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BD917E7519F0053D812 /* extension-deflate-stream.c */; };
+		F4CC3BF017E7519F0053D812 /* extension.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BDB17E7519F0053D812 /* extension.c */; };
+		F4CC3BF117E7519F0053D812 /* getifaddrs.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BDC17E7519F0053D812 /* getifaddrs.c */; };
+		F4CC3BF217E7519F0053D812 /* handshake.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BDE17E7519F0053D812 /* handshake.c */; };
+		F4CC3BF317E7519F0053D812 /* libwebsockets.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BDF17E7519F0053D812 /* libwebsockets.c */; };
+		F4CC3BF417E7519F0053D812 /* output.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BE117E7519F0053D812 /* output.c */; };
+		F4CC3BF517E7519F0053D812 /* parsers.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BE217E7519F0053D812 /* parsers.c */; };
+		F4CC3BF617E7519F0053D812 /* server-handshake.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BE417E7519F0053D812 /* server-handshake.c */; };
+		F4CC3BF717E7519F0053D812 /* server.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BE517E7519F0053D812 /* server.c */; };
+		F4CC3BF817E7519F0053D812 /* sha-1.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BE617E7519F0053D812 /* sha-1.c */; };
+		F4CC3BFB17E77B2D0053D812 /* SGVideoDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CC3BFA17E77B2D0053D812 /* SGVideoDriver.m */; };
+		F4CC3BFD17E77B7C0053D812 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CC3BFC17E77B7C0053D812 /* AVFoundation.framework */; };
+		F4CC3BFF17E77B830053D812 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CC3BFE17E77B830053D812 /* CoreVideo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F45E1FE117E8EE8C00821D8E /* SGVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGVideoViewController.h; sourceTree = "<group>"; };
+		F45E1FE217E8EE8C00821D8E /* SGVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGVideoViewController.m; sourceTree = "<group>"; };
+		F45E1FE417E8FBCB00821D8E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F45E1FE617E905BB00821D8E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F4CC3B6117E72FBA0053D812 /* InstaWebcam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaWebcam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4CC3B6417E72FBA0053D812 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F4CC3B6617E72FBA0053D812 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F4CC3B6817E72FBA0053D812 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F4CC3B6C17E72FBA0053D812 /* InstaWebcam-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InstaWebcam-Info.plist"; sourceTree = "<group>"; };
+		F4CC3B6E17E72FBA0053D812 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F4CC3B7017E72FBA0053D812 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F4CC3B7217E72FBA0053D812 /* InstaWebcam-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstaWebcam-Prefix.pch"; sourceTree = "<group>"; };
+		F4CC3B7317E72FBA0053D812 /* SGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGAppDelegate.h; sourceTree = "<group>"; };
+		F4CC3B7417E72FBA0053D812 /* SGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGAppDelegate.m; sourceTree = "<group>"; };
+		F4CC3B7617E72FBA0053D812 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F4CC3B7D17E72FBA0053D812 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F4CC3BAD17E743DD0053D812 /* Web.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Web.bundle; sourceTree = "<group>"; };
+		F4CC3BBF17E751960053D812 /* GCDWebServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServer.h; sourceTree = "<group>"; };
+		F4CC3BC017E751960053D812 /* GCDWebServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServer.m; sourceTree = "<group>"; };
+		F4CC3BC117E751960053D812 /* GCDWebServerConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerConnection.h; sourceTree = "<group>"; };
+		F4CC3BC217E751960053D812 /* GCDWebServerConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerConnection.m; sourceTree = "<group>"; };
+		F4CC3BC317E751960053D812 /* GCDWebServerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerPrivate.h; sourceTree = "<group>"; };
+		F4CC3BC417E751960053D812 /* GCDWebServerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerRequest.h; sourceTree = "<group>"; };
+		F4CC3BC517E751960053D812 /* GCDWebServerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerRequest.m; sourceTree = "<group>"; };
+		F4CC3BC617E751960053D812 /* GCDWebServerResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerResponse.h; sourceTree = "<group>"; };
+		F4CC3BC717E751960053D812 /* GCDWebServerResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerResponse.m; sourceTree = "<group>"; };
+		F4CC3BCD17E7519F0053D812 /* BLWebSocketsServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLWebSocketsServer.h; sourceTree = "<group>"; };
+		F4CC3BCE17E7519F0053D812 /* BLWebSocketsServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLWebSocketsServer.m; sourceTree = "<group>"; };
+		F4CC3BD017E7519F0053D812 /* base64-decode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "base64-decode.c"; sourceTree = "<group>"; };
+		F4CC3BD117E7519F0053D812 /* BLAsyncMessageQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLAsyncMessageQueue.h; sourceTree = "<group>"; };
+		F4CC3BD217E7519F0053D812 /* BLAsyncMessageQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLAsyncMessageQueue.m; sourceTree = "<group>"; };
+		F4CC3BD317E7519F0053D812 /* client-handshake.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "client-handshake.c"; sourceTree = "<group>"; };
+		F4CC3BD417E7519F0053D812 /* client-parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "client-parser.c"; sourceTree = "<group>"; };
+		F4CC3BD517E7519F0053D812 /* client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = client.c; sourceTree = "<group>"; };
+		F4CC3BD617E7519F0053D812 /* daemonize.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = daemonize.c; sourceTree = "<group>"; };
+		F4CC3BD717E7519F0053D812 /* extension-deflate-frame.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "extension-deflate-frame.c"; sourceTree = "<group>"; };
+		F4CC3BD817E7519F0053D812 /* extension-deflate-frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "extension-deflate-frame.h"; sourceTree = "<group>"; };
+		F4CC3BD917E7519F0053D812 /* extension-deflate-stream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "extension-deflate-stream.c"; sourceTree = "<group>"; };
+		F4CC3BDA17E7519F0053D812 /* extension-deflate-stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "extension-deflate-stream.h"; sourceTree = "<group>"; };
+		F4CC3BDB17E7519F0053D812 /* extension.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = extension.c; sourceTree = "<group>"; };
+		F4CC3BDC17E7519F0053D812 /* getifaddrs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = getifaddrs.c; sourceTree = "<group>"; };
+		F4CC3BDD17E7519F0053D812 /* getifaddrs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getifaddrs.h; sourceTree = "<group>"; };
+		F4CC3BDE17E7519F0053D812 /* handshake.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = handshake.c; sourceTree = "<group>"; };
+		F4CC3BDF17E7519F0053D812 /* libwebsockets.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libwebsockets.c; sourceTree = "<group>"; };
+		F4CC3BE017E7519F0053D812 /* libwebsockets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libwebsockets.h; sourceTree = "<group>"; };
+		F4CC3BE117E7519F0053D812 /* output.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = output.c; sourceTree = "<group>"; };
+		F4CC3BE217E7519F0053D812 /* parsers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = parsers.c; sourceTree = "<group>"; };
+		F4CC3BE317E7519F0053D812 /* private-libwebsockets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "private-libwebsockets.h"; sourceTree = "<group>"; };
+		F4CC3BE417E7519F0053D812 /* server-handshake.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "server-handshake.c"; sourceTree = "<group>"; };
+		F4CC3BE517E7519F0053D812 /* server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = server.c; sourceTree = "<group>"; };
+		F4CC3BE617E7519F0053D812 /* sha-1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "sha-1.c"; sourceTree = "<group>"; };
+		F4CC3BF917E77B2D0053D812 /* SGVideoDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGVideoDriver.h; sourceTree = "<group>"; };
+		F4CC3BFA17E77B2D0053D812 /* SGVideoDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGVideoDriver.m; sourceTree = "<group>"; };
+		F4CC3BFC17E77B7C0053D812 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F4CC3BFE17E77B830053D812 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4CC3B5E17E72FBA0053D812 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F45E1FE717E905BB00821D8E /* libz.dylib in Frameworks */,
+				F45E1FE517E8FBCB00821D8E /* QuartzCore.framework in Frameworks */,
+				F4CC3BFF17E77B830053D812 /* CoreVideo.framework in Frameworks */,
+				F4CC3BFD17E77B7C0053D812 /* AVFoundation.framework in Frameworks */,
+				F4CC3B6717E72FBA0053D812 /* CoreGraphics.framework in Frameworks */,
+				F4CC3B6917E72FBA0053D812 /* UIKit.framework in Frameworks */,
+				F4CC3B6517E72FBA0053D812 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4CC3B5817E72FBA0053D812 = {
+			isa = PBXGroup;
+			children = (
+				F4CC3B9317E743B60053D812 /* Libraries */,
+				F4CC3B6A17E72FBA0053D812 /* InstaWebcam */,
+				F4CC3B6317E72FBA0053D812 /* Frameworks */,
+				F4CC3B6217E72FBA0053D812 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4CC3B6217E72FBA0053D812 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4CC3B6117E72FBA0053D812 /* InstaWebcam.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4CC3B6317E72FBA0053D812 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F45E1FE617E905BB00821D8E /* libz.dylib */,
+				F45E1FE417E8FBCB00821D8E /* QuartzCore.framework */,
+				F4CC3BFE17E77B830053D812 /* CoreVideo.framework */,
+				F4CC3BFC17E77B7C0053D812 /* AVFoundation.framework */,
+				F4CC3B6417E72FBA0053D812 /* Foundation.framework */,
+				F4CC3B6617E72FBA0053D812 /* CoreGraphics.framework */,
+				F4CC3B6817E72FBA0053D812 /* UIKit.framework */,
+				F4CC3B7D17E72FBA0053D812 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4CC3B6A17E72FBA0053D812 /* InstaWebcam */ = {
+			isa = PBXGroup;
+			children = (
+				F4CC3BAD17E743DD0053D812 /* Web.bundle */,
+				F4CC3BF917E77B2D0053D812 /* SGVideoDriver.h */,
+				F4CC3BFA17E77B2D0053D812 /* SGVideoDriver.m */,
+				F4CC3B7317E72FBA0053D812 /* SGAppDelegate.h */,
+				F4CC3B7417E72FBA0053D812 /* SGAppDelegate.m */,
+				F45E1FE117E8EE8C00821D8E /* SGVideoViewController.h */,
+				F45E1FE217E8EE8C00821D8E /* SGVideoViewController.m */,
+				F4CC3B7617E72FBA0053D812 /* Images.xcassets */,
+				F4CC3B6B17E72FBA0053D812 /* Supporting Files */,
+			);
+			name = InstaWebcam;
+			path = InstantWebcam;
+			sourceTree = "<group>";
+		};
+		F4CC3B6B17E72FBA0053D812 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4CC3B6C17E72FBA0053D812 /* InstaWebcam-Info.plist */,
+				F4CC3B6D17E72FBA0053D812 /* InfoPlist.strings */,
+				F4CC3B7017E72FBA0053D812 /* main.m */,
+				F4CC3B7217E72FBA0053D812 /* InstaWebcam-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4CC3B9317E743B60053D812 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				F4CC3BCC17E7519F0053D812 /* BLWebSocketsServer */,
+				F4CC3BBE17E751960053D812 /* CGDWebServer */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		F4CC3BBE17E751960053D812 /* CGDWebServer */ = {
+			isa = PBXGroup;
+			children = (
+				F4CC3BBF17E751960053D812 /* GCDWebServer.h */,
+				F4CC3BC017E751960053D812 /* GCDWebServer.m */,
+				F4CC3BC117E751960053D812 /* GCDWebServerConnection.h */,
+				F4CC3BC217E751960053D812 /* GCDWebServerConnection.m */,
+				F4CC3BC317E751960053D812 /* GCDWebServerPrivate.h */,
+				F4CC3BC417E751960053D812 /* GCDWebServerRequest.h */,
+				F4CC3BC517E751960053D812 /* GCDWebServerRequest.m */,
+				F4CC3BC617E751960053D812 /* GCDWebServerResponse.h */,
+				F4CC3BC717E751960053D812 /* GCDWebServerResponse.m */,
+			);
+			path = CGDWebServer;
+			sourceTree = "<group>";
+		};
+		F4CC3BCC17E7519F0053D812 /* BLWebSocketsServer */ = {
+			isa = PBXGroup;
+			children = (
+				F4CC3BCD17E7519F0053D812 /* BLWebSocketsServer.h */,
+				F4CC3BCE17E7519F0053D812 /* BLWebSocketsServer.m */,
+				F4CC3BCF17E7519F0053D812 /* libwebsockets */,
+			);
+			path = BLWebSocketsServer;
+			sourceTree = "<group>";
+		};
+		F4CC3BCF17E7519F0053D812 /* libwebsockets */ = {
+			isa = PBXGroup;
+			children = (
+				F4CC3BD017E7519F0053D812 /* base64-decode.c */,
+				F4CC3BD117E7519F0053D812 /* BLAsyncMessageQueue.h */,
+				F4CC3BD217E7519F0053D812 /* BLAsyncMessageQueue.m */,
+				F4CC3BD317E7519F0053D812 /* client-handshake.c */,
+				F4CC3BD417E7519F0053D812 /* client-parser.c */,
+				F4CC3BD517E7519F0053D812 /* client.c */,
+				F4CC3BD617E7519F0053D812 /* daemonize.c */,
+				F4CC3BD717E7519F0053D812 /* extension-deflate-frame.c */,
+				F4CC3BD817E7519F0053D812 /* extension-deflate-frame.h */,
+				F4CC3BD917E7519F0053D812 /* extension-deflate-stream.c */,
+				F4CC3BDA17E7519F0053D812 /* extension-deflate-stream.h */,
+				F4CC3BDB17E7519F0053D812 /* extension.c */,
+				F4CC3BDC17E7519F0053D812 /* getifaddrs.c */,
+				F4CC3BDD17E7519F0053D812 /* getifaddrs.h */,
+				F4CC3BDE17E7519F0053D812 /* handshake.c */,
+				F4CC3BDF17E7519F0053D812 /* libwebsockets.c */,
+				F4CC3BE017E7519F0053D812 /* libwebsockets.h */,
+				F4CC3BE117E7519F0053D812 /* output.c */,
+				F4CC3BE217E7519F0053D812 /* parsers.c */,
+				F4CC3BE317E7519F0053D812 /* private-libwebsockets.h */,
+				F4CC3BE417E7519F0053D812 /* server-handshake.c */,
+				F4CC3BE517E7519F0053D812 /* server.c */,
+				F4CC3BE617E7519F0053D812 /* sha-1.c */,
+			);
+			path = libwebsockets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4CC3B6017E72FBA0053D812 /* InstaWebcam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4CC3B8D17E72FBA0053D812 /* Build configuration list for PBXNativeTarget "InstaWebcam" */;
+			buildPhases = (
+				F4CC3B5D17E72FBA0053D812 /* Sources */,
+				F4CC3B5E17E72FBA0053D812 /* Frameworks */,
+				F4CC3B5F17E72FBA0053D812 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstaWebcam;
+			productName = InstantWebcam;
+			productReference = F4CC3B6117E72FBA0053D812 /* InstaWebcam.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4CC3B5917E72FBA0053D812 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SG;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Simon Grätzer";
+			};
+			buildConfigurationList = F4CC3B5C17E72FBA0053D812 /* Build configuration list for PBXProject "InstaWebcam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F4CC3B5817E72FBA0053D812;
+			productRefGroup = F4CC3B6217E72FBA0053D812 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4CC3B6017E72FBA0053D812 /* InstaWebcam */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4CC3B5F17E72FBA0053D812 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4CC3BAE17E743DD0053D812 /* Web.bundle in Resources */,
+				F4CC3B6F17E72FBA0053D812 /* InfoPlist.strings in Resources */,
+				F4CC3B7717E72FBA0053D812 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4CC3B5D17E72FBA0053D812 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F45E1FE317E8EE8C00821D8E /* SGVideoViewController.m in Sources */,
+				F4CC3BED17E7519F0053D812 /* daemonize.c in Sources */,
+				F4CC3BE717E7519F0053D812 /* BLWebSocketsServer.m in Sources */,
+				F4CC3BC817E751960053D812 /* GCDWebServer.m in Sources */,
+				F4CC3BE917E7519F0053D812 /* BLAsyncMessageQueue.m in Sources */,
+				F4CC3BCA17E751960053D812 /* GCDWebServerRequest.m in Sources */,
+				F4CC3BF517E7519F0053D812 /* parsers.c in Sources */,
+				F4CC3BEB17E7519F0053D812 /* client-parser.c in Sources */,
+				F4CC3BEA17E7519F0053D812 /* client-handshake.c in Sources */,
+				F4CC3BF217E7519F0053D812 /* handshake.c in Sources */,
+				F4CC3BEE17E7519F0053D812 /* extension-deflate-frame.c in Sources */,
+				F4CC3B7517E72FBA0053D812 /* SGAppDelegate.m in Sources */,
+				F4CC3BF417E7519F0053D812 /* output.c in Sources */,
+				F4CC3BF017E7519F0053D812 /* extension.c in Sources */,
+				F4CC3B7117E72FBA0053D812 /* main.m in Sources */,
+				F4CC3BF317E7519F0053D812 /* libwebsockets.c in Sources */,
+				F4CC3BEC17E7519F0053D812 /* client.c in Sources */,
+				F4CC3BF117E7519F0053D812 /* getifaddrs.c in Sources */,
+				F4CC3BEF17E7519F0053D812 /* extension-deflate-stream.c in Sources */,
+				F4CC3BFB17E77B2D0053D812 /* SGVideoDriver.m in Sources */,
+				F4CC3BF817E7519F0053D812 /* sha-1.c in Sources */,
+				F4CC3BF617E7519F0053D812 /* server-handshake.c in Sources */,
+				F4CC3BCB17E751960053D812 /* GCDWebServerResponse.m in Sources */,
+				F4CC3BE817E7519F0053D812 /* base64-decode.c in Sources */,
+				F4CC3BC917E751960053D812 /* GCDWebServerConnection.m in Sources */,
+				F4CC3BF717E7519F0053D812 /* server.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F4CC3B6D17E72FBA0053D812 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4CC3B6E17E72FBA0053D812 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4CC3B8B17E72FBA0053D812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4CC3B8C17E72FBA0053D812 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4CC3B8E17E72FBA0053D812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InstantWebcam/InstaWebcam-Prefix.pch";
+				INFOPLIST_FILE = "InstantWebcam/InstaWebcam-Info.plist";
+				PRODUCT_NAME = InstaWebcam;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F4CC3B8F17E72FBA0053D812 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InstantWebcam/InstaWebcam-Prefix.pch";
+				INFOPLIST_FILE = "InstantWebcam/InstaWebcam-Info.plist";
+				PRODUCT_NAME = InstaWebcam;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4CC3B5C17E72FBA0053D812 /* Build configuration list for PBXProject "InstaWebcam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4CC3B8B17E72FBA0053D812 /* Debug */,
+				F4CC3B8C17E72FBA0053D812 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4CC3B8D17E72FBA0053D812 /* Build configuration list for PBXNativeTarget "InstaWebcam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4CC3B8E17E72FBA0053D812 /* Debug */,
+				F4CC3B8F17E72FBA0053D812 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4CC3B5917E72FBA0053D812 /* Project object */;
+}

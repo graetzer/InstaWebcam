@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <title>InstaWeb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Simon Grätzer" />
+
+    <script type="text/javascript">
+        
+        document.addEventListener('load', function() {
+                                  
+            var canvas, context, img;
+            canvas = document.getElementById("livefeed");
+            context = canvas.getContext("2d");
+            img = new Image();
+
+            window.timedRefresh = function() {
+              img.src = "/livefeed.jpeg?t=" + new Date().getTime();
+              img.onload = function() {
+                  context.drawImage(img, 0, 0);
+                  setTimeout("timedRefresh()", 1.0/15.0);
+              };
+           };
+          /*
+          ws = new WebSocket('ws://localhost:60001');
+          
+          // Invoked when there was an error with the connection.
+          ws.onerror = function(e) {
+            console.log('error', e);
+          }
+          
+          // Invoked when the socket has been opened successfully.
+          ws.onopen = function(e) {
+            console.log('open', e);
+          }
+          
+          // Callback invoked when incoming messages arrive. Event `data` attribute
+          // holds the string passed. WebSocket in current spec supports utf8 text-based
+          // communication only. Binary data  is base64 encoded.
+          ws.onmessage = function(e) {
+            var json = JSON.parse(e.data);
+            console.log('message', json);
+          }
+          
+          // Invoked when the socket has been closed
+          ws.onclose = function(e) {
+            console.log('close', e);
+          }*/
+        });
+    </script>
+  </head>
+  <body>
+      <canvas id="livefeed" width="600" height="600" />
+  </body>
+</html>

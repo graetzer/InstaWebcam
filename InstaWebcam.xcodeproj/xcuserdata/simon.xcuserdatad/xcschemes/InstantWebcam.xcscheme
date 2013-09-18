@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F4CC3B6017E72FBA0053D812"
                BuildableName = "InstantWebcam.app"
-               BlueprintName = "InstantWebcam"
-               ReferencedContainer = "container:InstantWebcam.xcodeproj">
+               BlueprintName = "InstaWebcam"
+               ReferencedContainer = "container:InstaWebcam.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "F4CC3B7B17E72FBA0053D812"
                BuildableName = "InstantWebcamTests.xctest"
                BlueprintName = "InstantWebcamTests"
-               ReferencedContainer = "container:InstantWebcam.xcodeproj">
+               ReferencedContainer = "container:InstaWebcam.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4CC3B6017E72FBA0053D812"
             BuildableName = "InstantWebcam.app"
-            BlueprintName = "InstantWebcam"
-            ReferencedContainer = "container:InstantWebcam.xcodeproj">
+            BlueprintName = "InstaWebcam"
+            ReferencedContainer = "container:InstaWebcam.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4CC3B6017E72FBA0053D812"
             BuildableName = "InstantWebcam.app"
-            BlueprintName = "InstantWebcam"
-            ReferencedContainer = "container:InstantWebcam.xcodeproj">
+            BlueprintName = "InstaWebcam"
+            ReferencedContainer = "container:InstaWebcam.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4CC3B6017E72FBA0053D812"
             BuildableName = "InstantWebcam.app"
-            BlueprintName = "InstantWebcam"
-            ReferencedContainer = "container:InstantWebcam.xcodeproj">
+            BlueprintName = "InstaWebcam"
+            ReferencedContainer = "container:InstaWebcam.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
