@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F4CC3B6017E72FBA0053D812"
-               BuildableName = "InstantWebcam.app"
+               BuildableName = "InstaWebcam.app"
                BlueprintName = "InstaWebcam"
                ReferencedContainer = "container:InstaWebcam.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4CC3B6017E72FBA0053D812"
-            BuildableName = "InstantWebcam.app"
+            BuildableName = "InstaWebcam.app"
             BlueprintName = "InstaWebcam"
             ReferencedContainer = "container:InstaWebcam.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4CC3B6017E72FBA0053D812"
-            BuildableName = "InstantWebcam.app"
+            BuildableName = "InstaWebcam.app"
             BlueprintName = "InstaWebcam"
             ReferencedContainer = "container:InstaWebcam.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4CC3B6017E72FBA0053D812"
-            BuildableName = "InstantWebcam.app"
+            BuildableName = "InstaWebcam.app"
             BlueprintName = "InstaWebcam"
             ReferencedContainer = "container:InstaWebcam.xcodeproj">
          </BuildableReference>
